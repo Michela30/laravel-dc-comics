@@ -46,7 +46,7 @@
                         {{ $singleComic->thumb }}
                     </td>
                     <td>
-                        {{ $singleComic->price }}
+                        {{ $singleComic->price }}€
                     </td>
                     <td>
                         {{ $singleComic->series }}
@@ -64,7 +64,7 @@
                         {{ $singleComic->writers }}
                     </td>
                     <td>
-                        <a class="text-decoration-none text-white" href="">
+                        <a class="text-decoration-none text-white" href="{{ route('comics.show', ['comic' => $singleComic->id ]) }}">
                             <button class="btn btn-primary">
                                 View
                             </button>

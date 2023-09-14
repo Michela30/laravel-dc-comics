@@ -1,5 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
 
 body{
-    background-color: aquamarine;
+    background-color: beige;
+}
+
+.card{
+    .img-box{
+        margin-top: 50px;
+        height: 400px;
+        width: 400px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
 }
