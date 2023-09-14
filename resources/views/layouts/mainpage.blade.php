@@ -8,7 +8,7 @@
     {{-- css/js --}}
     @vite(['resources/js/app.js'])
 
-    <title>@yield('page-title') | page</title>
+    <title>@yield('page-title') | Laravel Dc Comics</title>
 </head>
 <body>
     
