@@ -21,7 +21,7 @@ class ComicSeeder extends Seeder
 
         foreach ($comics as $elementComic) {
             $comic = new Comic();
-            
+
             $comic->title = $elementComic['title'];
             $comic->description = $elementComic['description'];
             $comic->thumb = $elementComic['thumb'];
@@ -29,8 +29,8 @@ class ComicSeeder extends Seeder
             $comic->series = $elementComic['series'];
             $comic->sale_date = $elementComic['sale_date'];
             $comic->type = $elementComic['type'];
-            $comic->artists = $elementComic['artists'];
-            $comic->writers = $elementComic['writers'];
+            $comic->artists = implode(', ',$elementComic['artists']);
+            $comic->writers = implode(', ',$elementComic['writers']);
             
             $comic->save();
         }
