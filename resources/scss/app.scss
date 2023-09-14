@@ -4,14 +4,34 @@ body{
     background-color: beige;
 }
 
+header{
+    height: 50px;
+    background-color: white;
+    nav{
+        text-align: center;
+        a{
+            color: black;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+    }
+    nav >*{
+        padding-right: 20px;
+    }
+}
+
 .card{
     .img-box{
-        margin-top: 50px;
-        height: 400px;
+        height: 420px;
         width: 400px;
         img{
             height: 100%;
             width: 100%;
         }
     }
+}
+
+.bg-form{
+    background-color: cadetblue;
+    padding: 10px 20px;
 }

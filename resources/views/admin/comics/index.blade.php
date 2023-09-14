@@ -6,10 +6,18 @@
 @section('main')
 
 <div class="container">
-    <div>
+    <div class="text-center">
         <h2>
             Comics Database
         </h2>
+    </div>
+
+    <div class="text-center mb-3">
+        <a href="{{ route('comics.create') }}">
+            <button class="btn btn-success w-50">
+                Add Comic Book
+            </button>
+        </a>
     </div>
 
     <table class="table">

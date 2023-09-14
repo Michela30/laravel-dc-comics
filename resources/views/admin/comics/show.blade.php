@@ -1,6 +1,6 @@
 @extends('layouts.mainpage')
 
-@section('page-title', 'Index Page')
+@section('page-title', 'Show Page')
 
 
 @section('main')
