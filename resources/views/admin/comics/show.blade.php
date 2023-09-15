@@ -66,6 +66,14 @@
 
     </div>
 
+    <div class="text-center mt-3">
+        <a href="{{ route('comics.index') }}" class="text-white text-decoration-none">
+            <button class="btn btn-success">
+                View all Comics
+            </button>
+        </a>
+    </div>
+
 </div>
     
 @endsection

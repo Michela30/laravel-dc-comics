@@ -77,6 +77,25 @@
                                 View
                             </button>
                         </a>
+
+                        <a class="text-decoration-none text-white" href="{{ route('comics.edit', ['comic' => $singleComic->id ]) }}">
+                            <button class="btn btn-warning">
+                                Edit
+                            </button>
+                        </a>
+
+                        <form action="{{ route('comics.destroy', ['comic' => $singleComic->id]) }}" method="POST"
+                            onsubmit="return confirm('Sei sicuro di voler eliminare questo Comic Book?')">
+                        @csrf
+                        @method('DELETE')
+
+                        <a class="text-decoration-none text-white" href="{{ route('comics.edit', ['comic' => $singleComic->id ]) }}">
+                            <button type="sumbit" class="btn btn-danger">
+                                Delete
+                            </button>
+                        </a>
+
+                        </form>
                     </td>
                 </tr>
             @endforeach
