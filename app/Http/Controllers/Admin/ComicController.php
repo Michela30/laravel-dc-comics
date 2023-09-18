@@ -94,6 +94,25 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
+        $request->validate([
+            'title' => 'required|max:70',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'required|numeric|min:2|max:100',
+            'type' => 'required|max:32'
+        ],[
+            'title.required' => 'The title is required',
+            'description.required' => 'The description is required',
+            'thumb.required' => 'The thumb is required',
+            'price.required' => 'The price is required',
+            'type.required' => 'The type is required',
+            'title.max' => 'The title is too long, you can use maximum 70 characters',
+            'price.min' => 'The price is incorrect, try again',
+            'price.max' => 'The price is incorrect, try again',
+            'type.max' => 'The type is too long, you can use maximum 32 characters',
+        ]);
+
         $comic = Comic::findOrFail($id);
 
         $data = $request->all();

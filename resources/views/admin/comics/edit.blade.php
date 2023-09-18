@@ -17,40 +17,74 @@
             
             <div class="mb-3">
                 <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Write here..." value="{{ $comic->title }}" required>
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Write here..." value="{{ old('title', $comic->title) }}" required>
             </div>
+
+            @error('title')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+            @enderror
+
             <div class="mb-3">
                 <label for="thumb" class="form-label">Thumb<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="thumb" name="thumb" placeholder="Write here..." value="{{ $comic->thumb }}" required>
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb" name="thumb" placeholder="Write here..." value="{{ old('thumb', $comic->thumb) }}" required>
             </div>
+
+            @error('thumb')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+            @enderror
+
             <div class="mb-3">
                 <label for="type" class="form-label">Type<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="type" name="type" placeholder="Write here..." value="{{ $comic->type }}" required>
+                <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type" placeholder="Write here..." value="{{ old('type', $comic->type )}}" required>
             </div>
+
+            @error('type')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+            @enderror
+
             <div class="mb-3">
                 <label for="price" class="form-label">Price<span class="text-danger">*</span></label>
-                <input type="number" min="2" max="100" class="form-control" id="price" name="price" placeholder="Write here..." value="{{ $comic->price }}" required>
+                <input type="number" min="2" max="100" class="form-control @error('price') is-invalid @enderror" id="price" name="price" placeholder="Write here..." value="{{ old('price', $comic->price) }}" required>
             </div>
+
+            @error('price')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+            @enderror
+
             <div class="mb-3">
                 <label for="series" class="form-label">Series</label>
-                <input type="text" class="form-control" id="series" name="series" placeholder="Write here..." value="{{ $comic->series }}">
+                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" placeholder="Write here..." value="{{ old('series', $comic->series) }}">
             </div>
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Sale date</label>
-                <input type="date" class="form-control" id="sale_date" name="sale_date" placeholder="Write here..." value="{{ $comic->sale_date }}">
+                <input type="date" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date" placeholder="Write here..." value="{{ old('sale_date', $comic->sale_date) }}">
             </div>
             <div class="mb-3">
                 <label for="artists" class="form-label">Artists</label>
-                <input type="text" class="form-control" id="artists" name="artists" placeholder="Write here..." value="{{ $comic->artists }}">
+                <input type="text" class="form-control @error('artists') is-invalid @enderror" id="artists" name="artists" placeholder="Write here..." value="{{ old('artists',$comic->artists )}}">
             </div>
             <div class="mb-3">
                 <label for="writers" class="form-label">Writers</label>
-                <input type="text" class="form-control" id="writers" name="writers" placeholder="Write here..." value="{{ $comic->writers }}">
+                <input type="text" class="form-control @error('writers') is-invalid @enderror" id="writers" name="writers" placeholder="Write here..." value="{{ old('writers', $comic->writers) }}">
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description<span class="text-danger">*</span></label>
-                <textarea class="form-control" id="description" name="description" rows="3" value="{{ $comic->description }}" required></textarea>
+                <textarea class="form-control @error('') is-invalid @enderror" id="description" name="description" rows="3" required> {{ old('description', $comic->description )}} </textarea>
             </div>
+
+            @error('description')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+            @enderror
 
             <div class="text-center">
                 <a href="">
