@@ -36,23 +36,44 @@
             </div>
 
                 @error('title')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
                 @enderror
-                
+
             <div class="mb-3">
                 <label for="thumb" class="form-label">Thumb<span class="text-danger">*</span></label>
                 <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb" name="thumb" placeholder="Write here a thumb..." required>
             </div>
+
+                @error('thumb')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             <div class="mb-3">
                 <label for="type" class="form-label">Type<span class="text-danger">*</span></label>
                 <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type" placeholder="Write here the type..." required>
             </div>
+
+                @error('type')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             <div class="mb-3">
                 <label for="price" class="form-label">Price<span class="text-danger">*</span></label>
                 <input type="number" min="2" max="100" class="form-control @error('price') is-invalid @enderror" id="price" name="price" placeholder="Write here the price..." required>
             </div>
+
+                @error('price')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
+
             <div class="mb-3">
                 <label for="series" class="form-label">Series</label>
                 <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" placeholder="Write here the series...">
@@ -73,6 +94,12 @@
                 <label for="description" class="form-label">Description<span class="text-danger">*</span></label>
                 <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" placeholder="Write here the description..." required></textarea>
             </div>
+
+                @error('description')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
 
             <div class="text-center">
                 <a href="">
